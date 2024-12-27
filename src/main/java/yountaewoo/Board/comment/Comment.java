@@ -17,6 +17,10 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    protected Comment() {
+
+    }
+
     public Comment(String content, Post post) {
         this.content = content;
         this.post = post;

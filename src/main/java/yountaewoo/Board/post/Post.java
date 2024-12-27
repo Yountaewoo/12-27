@@ -22,6 +22,11 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    protected Post() {
+
+    }
+
+
     public Post(Post board, String content, String title) {
         this.board = board;
         this.content = content;

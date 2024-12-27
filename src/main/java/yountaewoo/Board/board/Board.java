@@ -18,6 +18,10 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    protected Board() {
+
+    }
+
     public Board(String title) {
         this.title = title;
     }

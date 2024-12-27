@@ -1,5 +1,6 @@
 package yountaewoo.Board.board;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -8,11 +9,10 @@ import yountaewoo.Board.post.Post;
 import java.util.List;
 import java.util.Objects;
 
+@Entity
 public class Board {
 
     private String title;
-
-    private List<Post> posts;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

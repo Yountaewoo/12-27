@@ -14,8 +14,6 @@ public class Post {
 
     private String content;
 
-    private List<Comment> comments;
-
     @ManyToOne
     private Board board;
 

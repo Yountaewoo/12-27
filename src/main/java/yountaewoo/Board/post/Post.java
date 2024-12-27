@@ -1,6 +1,7 @@
 package yountaewoo.Board.post;
 
 import jakarta.persistence.*;
+import yountaewoo.Board.board.Board;
 
 import javax.xml.stream.events.Comment;
 import java.util.List;
@@ -16,7 +17,7 @@ public class Post {
     private List<Comment> comments;
 
     @ManyToOne
-    private Post board;
+    private Board board;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,14 +27,13 @@ public class Post {
 
     }
 
-
-    public Post(Post board, String content, String title) {
+    public Post(Board board, String content, String title) {
         this.board = board;
         this.content = content;
         this.title = title;
     }
 
-    public Post getBoard() {
+    public Board getBoard() {
         return board;
     }
 
@@ -47,6 +47,14 @@ public class Post {
 
     public String getTitle() {
         return title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Override

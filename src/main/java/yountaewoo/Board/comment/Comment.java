@@ -38,6 +38,10 @@ public class Comment {
         return post;
     }
 
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
